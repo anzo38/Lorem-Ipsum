@@ -1,0 +1,370 @@
+@import"reset";
+@import"setting";
+@import"mixin";
+// header{
+//   width: 100%;
+// }
+html {
+	overflow: auto;
+}
+body {
+  overflow: hidden;
+}
+
+#mainvisual{
+// width: 93%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  background:white;
+  // text-align: center;
+  width:1135px /  1366px * 100%;
+  margin: 0 auto;
+  padding:30px 0;
+  box-sizing: border-box;
+ 
+}
+
+  .mainvisual-logo{
+    
+    color:$green;
+    font-size: 40px;
+    white-space: nowrap;
+    // margin:2% 7%;
+    margin-right: auto;
+    // padding:1%;
+    // box-sizing: border-box;
+    align-items:center;
+  // vertical-align:middle;
+    
+  }
+  
+
+.mainvisual-nav{
+
+
+  margin-left: auto;
+
+
+
+  ul{
+   
+  display: flex;
+  align-items:flex-start;
+  color: $green;
+
+  
+    
+  }
+  li{
+font-size: 18px;
+margin-left: 20px;
+align-self:baseline;
+
+
+&:nth-child(7){
+  background: $green;
+  padding:5px;
+  box-sizing: border-box;
+  vertical-align:middle;
+} 
+}
+}
+
+.mainvisual-main{
+  width:100%;
+  background:$grey;
+  height: 668px /  1366px * 100vw;
+
+  color: white;
+  position: relative;
+
+}
+
+.mainvisual-inner{
+ @include inner;
+
+  h2{
+  font-size: 44px;
+  }
+  p {
+    
+   
+    margin:20px auto;
+  font-size: 22px;
+  line-height: 1.5rem;
+  }
+  }
+
+
+  #about{
+    width:100%;
+    // display: inline-block;
+  
+    height:468px / 1366px * 100vw;
+  
+    
+  }
+  .about{
+    position: relative;
+    width: 500px;
+    height:500px / 1366px * 100vw;
+    background-image:url("img/greeting.png");
+     background-position:
+     center center;
+     background-size:cover;
+     background-repeat:no-repeat;
+   
+  }
+
+  
+    .about-inner{
+     
+      @include inner;
+    
+      width:555px /  1366px * 100%;
+    
+    h3{
+      font-size: 40px;
+      color: $green;
+    }
+    p{
+      margin: 40px auto;
+      // width:555.48px / 1366px * 100%;
+      font-size: 18px;
+      line-height: 1.5rem;
+    
+    }
+  
+  }
+
+  
+  .banner-back{
+    //   position: absolute;
+
+    color: white;
+    position: relative;
+      height:1140px ;
+    
+    }
+  .banner-flot{
+    position:absolute;
+  height:880px ;
+  background:$banner-back;
+top:260px;
+   
+  }
+
+  #banner{
+    width: 1140px / 1360px * 100%;
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap:wrap;
+
+   
+    margin:0 100px  ;
+
+ 
+   
+  }
+  
+  .banner-item{
+    position: relative;
+    top:-160px ;
+    margin-bottom:70px ;
+    flex-basis:360px / 1366px * 100%;
+  }
+
+  .banner-inner{
+   
+     &::before {
+       content:"";
+       display: block;
+      background: $grd;
+      width: 360px / 1366px * 100vw;
+      height:240px / 1366px * 100vw; 
+     }
+  p{
+    width: 360px / 1366px * 100vw;
+    white-space:pre-line;
+    // width :100%;
+    color: black;
+// text-align: center;
+font-size: 16px;
+line-height: 1.5rem;
+margin-top:10px;
+  }
+}
+  .banner-btn {
+
+
+    
+    
+    width: 226px /  360px  * 100%;
+    margin:0 auto;
+  
+    display: block;
+   background:$pink;
+   margin-top:40px;
+  
+ 
+
+p{
+  width: auto;
+  text-align: center;
+  padding:20px 5px;
+  position: relative;
+   &::after{
+     display:inline-block;
+    font-family: "Font Awesome 5 Free";
+    content: "\f101";
+    font-weight: 900;
+    color: white;
+  position: absolute;
+  right: 20px;
+   
+   }
+   a{
+    @include a;
+     }}
+    
+  
+
+}
+.shopinfo-back{
+  width: 100%;
+  background:linear-gradient(90deg,white 0%,white 50%,$grd 50%,$grd 100%);
+// margin-top:1148px - 880px;
+// box-sizing: border-box;
+}
+#shopinfo{
+  width:455px/ 1366px * 100%;
+  margin-left: 100px/ 1366px * 100%;
+ padding:80px 0;
+ box-sizing: border-box;
+  h3{
+    font-size: 28px;
+    color:$green
+  }
+  table{
+    margin-top: 35px;
+    font-size: 16px;
+ 
+    // border-collapse: separate;
+    // border-spacing: 10px 100px;
+  }
+  tr{
+    // display: inline-block;
+    // margin :30px;
+  // padding:35px 30px 35px 0;
+  //   box-sizing: border-box;
+  }
+ 
+  th{
+    display: block;
+    margin :30px 30px 30px 0;
+    width: 146px / 455px * 100%;;
+    text-align: left;
+    white-space: nowrap;
+    
+ 
+  }
+
+  td{
+    color: $shopinfo;
+    padding-left:30px;
+      border-left:solid 2px $shopinfo;
+      white-space: nowrap;
+  }
+
+}
+.footer{
+  background:linear-gradient(180deg,$footer-dr 20%,$footer-li 100%);
+  width: 100%;
+}
+footer{
+
+  width:686px / 1366px * 100%;
+color: white;
+margin:0 auto;
+text-align: center;
+
+  h4{
+    padding-top:65px;
+    box-sizing: border-box;
+    font-size: 40px;
+  }
+  
+}
+
+.footer-address{
+  font-size: 18px;
+  margin:20px;
+  
+  p{
+  padding: 10px 0;
+  box-sizing: border-box;
+  &:nth-child(2){
+    &::before{
+      content: url(img/footer-tellogo@x2.png);
+      display: inline-block;
+     margin-right: 10px;
+    }
+  }
+  }
+}
+
+.footer-box{
+
+width: 227px / 386px * 100%;
+margin: 20px auto 55px;
+background:$pink;
+p{
+  padding: 25px;
+  box-sizing: border-box;
+
+}
+
+  a{
+    font-size: 18px;
+
+    &:before{
+      content: "\f3c5";
+  display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    margin-right: 20px;
+   font-weight: 800;
+}
+}
+}
+
+.footer-nav{
+  // width:386px / 1366px * 100%;
+  // margin: 0 auto;
+  // text-align: center;
+ 
+  ul{
+    
+    font-size: 14px;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+ 
+  }
+  li{
+ 
+    padding: 0 15px;
+    box-sizing: border-box;
+  border-left: solid 1px white;
+  &:nth-child(1){
+    border-left:none;
+  
+  }}
+  p{
+  padding-bottom: 60px;
+  box-sizing:border-box ;
+  }
+
+}
